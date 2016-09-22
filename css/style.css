@@ -1,0 +1,32 @@
+body{
+  background: #282e3a;
+  font-family: tahoma;
+}
+h1{
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  
+}
+.container{
+  width: 40%;
+  margin-top: 40px;
+}
+.plusMinus{
+  /*position: relative;*/
+  /*margin: auto;*/
+}
+#startPause{
+  background-color: #2dcb74;
+  color: white;
+}
+#reset{
+  background-color: #fa5559;
+}
+#output{
+  width: 100px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  margin: 30px auto;
+}
