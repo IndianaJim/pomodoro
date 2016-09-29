@@ -1,32 +1,149 @@
-body{
-  background: #282e3a;
+body {
+  background: #50514F;
   font-family: tahoma;
 }
-h1{
+
+h1 {
   color: white;
   text-align: center;
-  font-size: 40px;
-  
+  font-size: 50px;
+  font-family: 'Luckiest Guy', cursive;
 }
-.container{
-  width: 40%;
+
+.container {
+  width: 60%;
   margin-top: 40px;
 }
-.plusMinus{
-  /*position: relative;*/
-  /*margin: auto;*/
+
+.plusMinus {
+  margin: auto;
+  font-size: 23px;
 }
-#startPause{
-  background-color: #2dcb74;
+
+#breakTime {
+  color: #F25F5C;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+#workTime {
+  color: #70C1B3;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+#SetLabel {
   color: white;
+  font-size: 15px;
+  margin-top: 14px;
+  text-align: center;
 }
-#reset{
-  background-color: #fa5559;
-}
-#output{
+
+#startPause {
   width: 100px;
-  height: 25px;
-  background-color: black;
-  color: white;
-  margin: 30px auto;
+  padding: 5px;
+  background-color: #247BA0;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 1px 1px .5px rgba(0, 0, 0, .4);
+}
+
+#reset {
+  width: 100px;
+  padding: 5px;
+  background-color: #D1B134;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 1px 1px .5px rgba(0, 0, 0, .4);
+}
+
+#controls {
+  text-align: center;
+  margin: 10px auto;
+}
+
+#outputDiv {
+  text-align: center;
+  width: 100%;
+}
+
+#outputW {
+  color: #70C1B3;
+  margin: -30px auto;
+  text-align: center;
+  font-size: 200px;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+@media (max-width: 320px) {
+  #outputW {
+    font-size: 75px;
+  }
+  .container {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .plusMinus {
+    font-size: 14px;
+  }
+  #workTime {
+    font-size: 18px;
+  }
+  #breakTime {
+    font-size: 18px;
+  }
+  #setLabel{
+    font-size: 9px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  #outputW {
+    font-size: 100px;
+  }
+  .container {
+    width: 80%;
+    margin-top: 40px;
+  }
+  .plusMinus {
+    font-size: 16px;
+  }
+  #workTime {
+    font-size: 20px;
+  }
+  #breakTime {
+    font-size: 20px;
+  }
+  #setLabel{
+    font-size: 11px;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #outputW {
+    font-size: 120px;
+  }
+  .container {
+    width: 70%;
+    margin-top: 40px;
+  }
+  .plusMinus {
+    font-size: 18px;
+  }
+  #workTime {
+    font-size: 22px;
+  }
+  #breakTime {
+    font-size: 22px;
+  }
+  #setLabel{
+    font-size: 13px;
+    margin-top: 0px;
+  }
 }
