@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>A Pen by  Jim Runkel</title>
+    <title>Pomodoro Work Timer</title>
     
     
     
@@ -19,46 +19,51 @@
   <body>
 
     <html>
-  <head>
-   <title>Pomodoro Work Timer</title> 
-   <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
-  </head>
-  <body>
-   <h1>Pomodoro Work Timer</h1>
-   <div class="container">
-     <div class="row">
-      <div id="settings">
-        <a  class="col-sm-1">         </a>
-       <button id="workMinus" class="plusMinus col-sm-1">-</button>
-       <a id="workTime" class="plusMinus col-sm-2">25</a>
-       <button id="workPlus" class="plusMinus col-sm-1">+</button> 
-       <a  class="col-sm-2">         </a>
-       <button id="breakMinus" class="plusMinus col-sm-1">-</button>
-       <a id="breakTime" class="plusMinus col-sm-2">5</a>
-       <button id="breakPlus" class="plusMinus col-sm-1">+</button>  
-          <a  class="col-sm-1">         </a>
-      </div> <!--end div settings --> 
-    </div><!-- end div row -->
-    <div class="row">
-       <a  class="col-sm-1">         </a>
-       <a id="SetLabel" class="col-sm-4">Set Work Minutes</a>
-       <a  class="col-sm-2">         </a>
-       <a id="SetLabel" class="col-sm-4">Set Break Minutes</a>
-       <a  class="col-sm-1">         </a>  
-     </div><!-- end div row -->      
+<!--
+Pomodoro Work Timer which creates timed work and break sessions,  developed for Free Code Camp Front-End Development course.
+-->
+<head>
+  <title>Pomodoro Work Timer</title>
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Pomodoro Work Timer</h1>
+  <div class="length-control">
+    <div class="length-control__wrap">
+      <p class="setLabel">Set WORK Minutes</p>
+      <button id="workMinus" class="plusMinus">-</button>
+      <span id="workTime">25</span>
+      <button id="workPlus" class="plusMinus">+</button>
+    </div>
+    <!--end work minutes setting -->
+    <div class="length-control__wrap">
+      <p class="setLabel">Set BREAK Minutes</p>
+      <button id="breakMinus" class="plusMinus">-</button>
+      <span id="breakTime">5</span>
+      <button id="breakPlus" class="plusMinus">+</button>
+    </div>
+    <!--end break minutes setting -->
+  </div>
+  <!--end length-control div -->
+
+  <div class="container">
 
     <div id="outputDiv" class="row">
-     <a id="outputW">25:00</a>
+      <a id="outputW">25:00</a>
     </div>
     <div class="row">
-     <div id="controls">
-      <button id="startPause">Start</button>
-      <button id="reset">Reset</button>
-     </div>
-    </div><!-- end row -->
-    
-   </div><!-- end div container -->
-  </body>  
+      <div id="controls">
+        <button id="startPause">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+    <!-- end row -->
+
+  </div>
+  <!-- end div container -->
+</body>
+
 </html>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
