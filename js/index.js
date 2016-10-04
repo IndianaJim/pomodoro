@@ -5,9 +5,8 @@ $(document).ready(function() {
   var output1 = document.getElementById("outputW");
   var breakTime = document.getElementById("breakTime");
   var workTime = document.getElementById("workTime");
-  
+
   function reset() {
-    //console.log("reset ran");
     running = 0;
     seconds = 0;
     minutes = workTime.innerHTML;
@@ -15,7 +14,7 @@ $(document).ready(function() {
     output1.innerHTML = minutes + ":00";
     document.getElementById("startPause").innerHTML = 'Start';
   }
-   
+
   function increment() {
     if (running === 1) {
       var timer = setTimeout(function() {
@@ -27,9 +26,9 @@ $(document).ready(function() {
         } else {
           seconds = seconds - 1;
         }
-        if (running === 0){
+        if (running === 0) {
           //bail out of increment loop...
-        }else if (seconds <= 0 && minutes <= 0) {
+        } else if (seconds <= 0 && minutes <= 0) {
           //change color of text to other type via css id
           console.log(output1.style.color);
           if (output1.style.color == "rgb\(112, 193, 179\)") {
@@ -45,9 +44,9 @@ $(document).ready(function() {
           running = 1;
           increment();
         } else {
-          if (seconds < 10){
+          if (seconds < 10) {
             output1.innerHTML = minutes + ":0" + seconds;
-          }else{
+          } else {
             output1.innerHTML = minutes + ":" + seconds;
           }
           increment();
@@ -56,7 +55,7 @@ $(document).ready(function() {
       }, 1000);
     }
   } //end increment function
-  
+
   function startPause() {
     //console.log("start pushed");
     if (running === 0) {
@@ -86,27 +85,31 @@ $(document).ready(function() {
     }
   })
   $('#breakPlus').on('click', function() {
-    breakTime.innerHTML = Number(breakTime.innerHTML) + 1;
+    if (breakTime.innerHTML < 100) {
+      breakTime.innerHTML = Number(breakTime.innerHTML) + 1;
+    }
   })
   $('#workMinus').on('click', function() {
     if (workTime.innerHTML > 0) {
       workTime.innerHTML = Number(workTime.innerHTML) - 1;
-      if (running == 1){
-       startPause();
-       reset();
-      }else{
+      if (running == 1) {
+        startPause();
+        reset();
+      } else {
         reset();
       }
     }
   })
   $('#workPlus').on('click', function() {
+   if (workTime.innerHTML < 100) { 
     workTime.innerHTML = Number(workTime.innerHTML) + 1;
-     if (running == 1){
-       startPause();
-       reset();
-      }else{
-        reset();
-      }
+    if (running == 1) {
+      startPause();
+      reset();
+    } else {
+      reset();
+    }
+   }
   })
 
 }); //end doc ready function
